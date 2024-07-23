@@ -8,29 +8,42 @@
     <!-- Link to Spectral font -->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+       body {
             font-family: 'Spectral', serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; padding: 0;
+            box-sizing: border-box;
             background-color: #001f3f;
             color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #003366; 
-            border-radius: 8px; 
         }
         header {
             text-align: center;
             padding: 20px;
+            background-color: #003366; 
+            border-bottom: 2px solid #c5c6d0; 
         }
-
+        header h1 {
+            margin: 0;
+            color: #c5c6d0; 
+        }
+        header p {
+            margin: 10px 0;
+        }
+        header a {
+            color: #ffcc00; 
+            text-decoration: none;
+        }
         section {
             padding: 20px;
+            margin: 20px 0;
+            background-color: #003366; 
             text-align: justify;
+            border-radius: 8px; 
+        }
+        h2 {
+            text-align: center;
+            color: #c5c6d0; 
+            margin-top: 0;
         }
         #bio {
             text-align: justify;
@@ -50,8 +63,28 @@
             max-width: 650px;
             max-height:650px;
         }
-        h2 {
-            text-align: center;
+          #skills ul, #achievements ul, #projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #skills li, #achievements li, #projects li {
+            margin: 10px 0;
+        }
+        #skills h3, #achievements h3, #projects h3 {
+            font-size: 1.2em;
+            color: #ffcc00; /* Gold color for subheadings */
+        }
+        #skills p, #achievements p, #projects p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #e0e0e0; /* Slightly lighter text color */
+        }
+        a {
+            color: #ffcc00; /* Gold color for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
