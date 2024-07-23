@@ -41,6 +41,29 @@
             text-align: justify;
             border-radius: 80px;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff; /* White background for dropdown content */
+            min-width: 200px; /* Minimum width of dropdown content */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+            z-index: 1;
+            text-align: justify; /* Align text to the left */
+            padding: 20px;
+            color: #2c3e50; /* Navy Blue text color */
+            border-radius: 8px; /* Rounded corners */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        h2 {
+            cursor: pointer; /* Cursor pointer for clickable headings */
+        }
         h2 {
             text-align: center;
             margin-top: 0;
@@ -86,7 +109,7 @@
             color: #001f3f; 
         }
         #skills p, #achievements p, #projects p {
-            font-size: 1em;
+            font-size: 18px;
             line-height: 1.6;
             color: #001f3f; 
         }
@@ -97,6 +120,10 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -116,8 +143,9 @@
         <p>I was honored to receive the Best Student Award for the 2020-2024 academic year from CSI GNITS at G. Narayanamma Institute of Technology and Science (GNITS). This recognition highlighted my efforts in founding Celeste GNITS and my dedication to researching and introducing innovative concepts such as space science, the metaverse, and nanorobotics to my fellow students.</p>
         <p>Beyond my professional roles, I am an explorer and writer, delving into Statistics, Research, Machine Learning, Neural Networks, Math, Physics, Chemistry, and Nanotechnology.</p>
     </section>
-  <section id="skills">
+  <div class="dropdown">
         <h2>Skills</h2>
+      <div class="dropdown-content">
         <ul>
             <li>Python for Machine Learning, Data Science, Geospatial Analysis, and Statistics</li>
             <li>Multiprocessing and basic web development</li>
@@ -127,9 +155,11 @@
             <li>Open Innovation</li>
             <li>Proposal Writing</li>
         </ul>
-    </section>
-    <section id="achievements">
+    </div>
+  </div>
+    <div class="dropdown">
         <h2>Achievements</h2>
+        <div class="dropdown-content">
         <img src="ntc_ach_5.jpg" alt="3rd prize in Biotech Innovation Challenge held at IIT Madras">
         <ul>
             <li>Recipient of the Best Student Award from the CSE Department at GNITS, awarded through CSI GNITS, for the academic year 2020-2024</li>
@@ -140,9 +170,11 @@
             <li>Top-5 in ThinkPad-Idea Pitching at AISYWLC-2021</li>
             <li>Founder President of Celeste: A Space Research Center at GNITS, Hyderabad</li>
         </ul>
-    </section>
-    <section id="projects">
+    </div>
+    </div>
+        <div class="dropdown">
         <h2>Projects</h2>
+            <div class="dropdown-content">
         <ul>
             <li>
                 <h3>Neural Network Approach for prediction and analysis of solar storms from DSCOVR data</h3>
@@ -163,9 +195,11 @@ I applied these principles to the project involving large-scale datasets on comm
                 <a href="https://www.kaggle.com/code/sumamallapragada/foursquare-gd-analysis?scriptVersionId=99822914">Kaggle Notebook</a>
             </li>
         </ul>
-    </section>
-<section id="ieee">
+    </div>
+        </div>
+<div class="dropdown">
     <h2>IEEE Involvement and Community Engagement</h2>
+      <div class="dropdown-content">
     <p>
             I am actively involved in multiple IEEE communities, including:
         </p>
@@ -185,7 +219,8 @@ I applied these principles to the project involving large-scale datasets on comm
         <p>
             Additionally, I am part of the working group for IEEE SA's Spatial Computing for Metaverse Initiative (IEEE P2048). My roles in these communities allow me to contribute to the development of emerging technologies and standards, fostering advancements in spatial computing and telehealth.
         </p>
-</section>
+</div>
+</div>
  <section id="quora">
         <h2>Quora Interests</h2>
         <p>I actively share my knowledge and insights on Quora, where I have written 124 answers across topics such as Statistics, Research, Machine Learning, Neural Networks, Math, Physics, Chemistry, and Nanotechnology. My space, "Dose of new Engineering Ideas," focuses on summarizing research papers with practical implications and exploring cutting-edge technologies.</p>
