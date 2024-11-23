@@ -8,6 +8,37 @@
     <!-- Link to Spectral font -->
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        .content {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        .toggle-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .toggle-btn:hover {
+            background: #005bb5;
+        }
+
+        .active + .content {
+            display: block;
+            max-height: 500px; /* Adjust based on content */
+            padding: 10px;
+        }
        body {
             font-family: 'Spectral', serif;
             margin: 120px 0;
@@ -129,18 +160,9 @@
         <a href="https://www.quora.com/profile/Suma-Mallapragada">Quora</a>
         <a href="https://www.kaggle.com/sumamallapragada">Kaggle</a>
     </header>
-    <nav>
-    <ul>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#ieee">IEEE Involvement and Community Engagement</a>
-        <a href="#quora">Quora Interests</a>
-    </ul>
-</nav>
     <section id="about">
         <h2>About Me</h2>
+        <button class="toggle-btn">About Me</button>
          <img src="suma_picture.jpg" alt="Suma Mallapragada">
         <p>I am a Computer Science and Engineering graduate from <span style="color:#1f456e;">G.Narayanamma Institute of Technology and Science (GNITS), Hyderabad</span>.(2020–2024). My interests span across Science, Computer Science, Nanotechnology, Artificial Intelligence, and Quantum Computing.</p>
         <p>I work as a Mainframe DB2 Developer at <span style="color:#1f456e;">Bank of America Continuum India</span>.</p>
@@ -162,6 +184,7 @@
         <p>I write poems and short stories in my free time.I have been penning my autobiography, <span style="color:#1f456e;">"Mirror of Facts when I am Ill: When want to be Outstanding turns into Understanding",</span> since 2023.</p>
     </section>
     <section id="achievements">
+        <button class="toggle-btn">Achievements</button>
         <h2>Achievements</h2>
         <img src="ntc_ach_5.jpg" alt="3rd prize in Biotech Innovation Challenge held at IIT Madras">
         <br>
@@ -182,6 +205,7 @@
         </ul>
     </section>
       <section id="skills">
+          <button class="toggle-btn">Skills</button>
         <h2>Skills</h2>
         <ul>
             <li>Python for Machine Learning, Data Science, Geospatial Analysis, Statistics, Multiprocessing</li>
@@ -198,6 +222,7 @@
         </ul>
   </section>
         <section id="projects">
+            <button class="toggle-btn">Projects</button>
         <h2>Projects</h2>
         <ul>
             <li>
@@ -230,6 +255,7 @@ I applied these principles to the project involving large-scale datasets on comm
         </ul>
     </section>
 <section id="ieee">
+    <button class="toggle-btn">IEEE Involvement and Community Engagement</button>
     <h2>IEEE Involvement and Community Engagement</h2>
     <p>I have been a proud MIEEE since 2021.I have been engaging myself in IEEE Collabratec workspaces on 4D Printing, and other AI related activities technically.</p>
     <p>
@@ -254,10 +280,26 @@ I applied these principles to the project involving large-scale datasets on comm
         </p>
 </section>
  <section id="quora">
+     <button class="toggle-btn">Quora Interests</button>
         <h2>Quora Interests</h2>
         <p>I actively share my knowledge and insights on Quora, where I have written 124 answers across topics such as Statistics, Research, Machine Learning, Neural Networks, Math, Physics, Chemistry, and Nanotechnology. My space, "Dose of new Engineering Ideas," focuses on summarizing research papers with practical implications and exploring cutting-edge technologies.</p>
         <a href="https://www.quora.com/profile/Suma-Mallapragada">Quora Profile</a>
     </section> 
+      <script>
+        const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
     <footer>
         &copy; 2024 My Website. All rights reserved.
     </footer>
